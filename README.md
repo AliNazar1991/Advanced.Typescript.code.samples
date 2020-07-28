@@ -1,5 +1,5 @@
 # Advanced Typescript code samples
-Code samples with advanced Typescript features
+Code samples of advanced Typescript features
 
 - numeric separator
 
