@@ -1,0 +1,15 @@
+{
+  "name": "numeric-separators",
+  "version": "1.0.0",
+  "description": "",
+  "main": "AmountInput.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node *.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^3.9.7"
+  }
+}
