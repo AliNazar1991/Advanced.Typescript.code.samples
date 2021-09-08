@@ -1,4 +1,4 @@
-// type inference is when typescript will guess if a variable is a certain type
+// type inference is basically typescript guessing what type a variable/function/object is
 
 // variables
 const numberOrBoolean: number | boolean = 5;
