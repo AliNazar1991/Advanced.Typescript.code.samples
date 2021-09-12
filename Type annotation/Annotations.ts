@@ -23,3 +23,60 @@ const add = (a: number, b: number): number => {
   return a + b;
 };
 
+function divide(a: number, b: number): number {
+  return a / b;
+}
+
+// Anonymous functions assigned to variables
+const multiply = function (a: number, b: number): number {
+  return a * b;
+};
+
+// void
+const logger = (message: string): void => {
+  console.log(message);
+};
+
+// never - means we will never reach the end of the function completely - however very rare usage of never.
+const throwError = (message: string): never => {
+  throw new Error(message);
+};
+
+/**
+ * object desctructing with function argument that has type annotation.
+ * in function parameter list, left hand side uses object destructuring to destruct
+ * the values needed, and left hand side has the type annotation for the function args.
+ **/
+const forecast = ({ date, weather }: { date: Date; weather: string }): void => {
+  console.log(date);
+};
+
+// Objects
+
+const profile = {
+  name: "ali",
+  age: 20,
+  coords: {
+    lat: 0,
+    lng: 15,
+  },
+  setAge(age: number): void {
+    this.age = age;
+  },
+};
+
+/**
+ * if we want to add type annotation for a destructed object, it
+ * will only be possible if the expected structure is denoted as type annotation
+ * for what is being destructured.
+ * Ex:
+ * the destructed age property below is of type number, however its not
+ * enough to only write ": number" as a type annotation after it,
+ * we have to specify the exact structure as shown below.
+ */
+const { age }: { age: number } = profile;
+
+// indeed very nasty syntax
+const {
+  coords: { lat, lng },
+}: { coords: { lat: number; lng: number } } = profile;
